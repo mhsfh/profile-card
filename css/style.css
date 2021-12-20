@@ -1,0 +1,97 @@
+:root {
+  --Dark-cyan: hsl(185, 75%, 39%);
+  --Very-dark-desaturated-blue: hsl(229, 23%, 23%);
+  --Dark-grayish-blue: hsl(227, 10%, 46%);
+
+  --Dark-gray: hsl(0, 0%, 59%);
+}
+* {
+  font-family: "Kumbh Sans", sans-serif;
+  box-sizing: border-box;
+}
+body,
+html {
+  margin: 0;
+  background-color: var(--Dark-cyan);
+}
+.card {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  overflow: hidden;
+  background-color: white;
+  width: 325px;
+  height: 370px;
+  border-radius: 15px;
+  box-shadow: var(--Very-dark-desaturated-blue) -10px 50px 150px -49px;
+}
+.card > img {
+  border-radius: 50%;
+  border: white 4px solid;
+  transform: translate(0, -60%);
+
+  margin: 0 auto;
+  display: block;
+}
+.card h1 {
+  margin-top: 0;
+  font-size: 18px;
+  text-align: center;
+  color: var(--Very-dark-desaturated-blue);
+}
+.card > h1 {
+  margin-top: -45px;
+  margin-bottom: 19px;
+}
+.card > h1 > span {
+  font-weight: normal;
+  color: var(--Dark-grayish-blue);
+}
+.card p {
+  margin-top: 0;
+  text-align: center;
+  color: var(--Dark-grayish-blue);
+  font-size: 13px;
+  margin-top: -9px;
+}
+hr {
+  border: var(--Dark-gray) solid;
+  border-width: 0 0 0.4px;
+  opacity: 0.5;
+  margin: 25px 0;
+}
+.numbers {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-evenly;
+  width: 100%;
+  padding: 0 10px;
+}
+.numbers p {
+  font-size: 10px;
+  letter-spacing: 2px;
+  width: 62px;
+}
+.top,
+.bot {
+  object-fit: cover;
+  z-index: -1;
+}
+.top {
+  position: fixed;
+  top: -75%;
+  left: -17%;
+  height: 644px;
+}
+.bot {
+  position: fixed;
+  bottom: -85%;
+  right: -17%;
+  height: 644px;
+}
+@media (min-width: 800px) {
+  .card {
+    transform: translate(-50%, -50%) scale(0.7);
+  }
+}
